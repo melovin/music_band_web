@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Domů",
+        "url": "/"
+    },
+    {
+        "title": "O nás",
+        "url": "/about"
+    },
+    {
+        "title": "Aktuality",
+        "url": "/news"
+    },
+    {
+        "title": "Galerie",
+        "url": "/gallery"
+    },
+    {
+        "title": "Kontakt",
+        "url": "/contact"
+    }
+
+]
