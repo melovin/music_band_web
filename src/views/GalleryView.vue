@@ -5,27 +5,24 @@
     :onInit="onInit"
     :onBeforeSlide="onBeforeSlide"
   >
-    <a
-        v-for="ph in this.photos"
-      data-lg-size="1406-1390"
+      <a
       class="gallery-item"
-      data-src="https://images.unsplash.com/photo-1581894158358-5ecd2c518883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1406&q=80"
-      data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
+      :data-src="this.photos[0].acf.imageorvideo"
+    >
+      <img
+        class="img-responsive"
+        :src="this.photos[0].acf.imageorvideo"
+      />
+    </a>
+    <a       
+      v-for="ph in this.photos.slice(1)"
+      class="gallery-item"
+      :data-src="ph.acf?.imageorvideo"
+      :data-sub-html="ph.acf.alt"
     >
       <img
         class="img-responsive"
         :src="ph.acf.imageorvideo"
-      />
-    </a>
-    <a
-      data-lg-size="1406-1390"
-      class="gallery-item"
-      data-src="https://images.unsplash.com/photo-1581894158358-5ecd2c518883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1406&q=80"
-      data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@entrycube' >Diego Guzmán </a></h4> <p> Location - <a href='https://unsplash.com/s/photos/fushimi-inari-taisha-shrine-senbontorii%2C-68%E7%95%AA%E5%9C%B0-fukakusa-yabunouchicho%2C-fushimi-ward%2C-kyoto%2C-japan'>Fushimi Ward, Kyoto, Japan</a></p>"
-    >
-      <img
-        class="img-responsive"
-        src="https://images.unsplash.com/photo-1581894158358-5ecd2c518883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80"
       />
     </a>
     <a
@@ -84,7 +81,6 @@ export default {
     async GetPhotosGallery()
     {
         this.photos = await getPhotos();
-        console.log('chjo')
     }
   },
 };
@@ -103,8 +99,8 @@ img{
     aspect-ratio: 1/1;
     width: 100%;
     object-fit: cover;
-    border-bottom: #FFD132 solid 1px;
-    border-right: #FFD132 1px solid;
+    border-bottom: #FFD132 solid 2px;
+    border-right: #FFD132 2px solid;
 }
 .lightgallery-vue{
     display: grid;

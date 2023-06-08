@@ -1,12 +1,14 @@
 <template lang="cs">
     <div>
         <div class="ticket">
-            <div class="content">
-                <h2>{{this.news.name}}</h2>
-                <p>{{this.news.desc}}</p>
-                <p class="date">Publikováno: {{this.news.date}}</p>
+            <div class="ticketContent">
+                <div class="content">
+                    <h2>{{this.news.name}}</h2>
+                    <p>{{this.news.desc}}</p>
+                    <p class="date">Publikováno: {{this.news.date}}</p>
+                </div>
+                <img src="../assets/hp_foto.svg" />
             </div>
-            <img src="../assets/hp_foto.svg" />
         </div>
     </div>
 </template>
@@ -24,6 +26,12 @@ export default {
 }
 </script>
 <style scoped>
+.ticketContent{
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+}
 img{
     height: 300px;
     width: auto;

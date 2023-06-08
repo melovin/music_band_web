@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView'
 import NewsView from '../views/NewsView.vue'
 import GalleryView from '../views/GalleryView'
 import ContactView from '../views/ContactView'
+import galleryTest from '@/views/galleryTest'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/contact',
     name: 'Kontakt',
     component: ContactView
+  },
+  {
+    path: '/galleryTest',
+    name: 'gtest',
+    component: galleryTest
   },
 ]
 
