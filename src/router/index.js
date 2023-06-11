@@ -2,9 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView'
 import NewsView from '../views/NewsView.vue'
-import GalleryView from '../views/GalleryView'
 import ContactView from '../views/ContactView'
-import galleryTest from '@/views/galleryTest'
+import GalleryView from '@/views/GalleryView'
 
 const routes = [
   {
@@ -33,9 +32,9 @@ const routes = [
     component: ContactView
   },
   {
-    path: '/galleryTest',
-    name: 'gtest',
-    component: galleryTest
+    path: '/gallery',
+    name: 'Galerie',
+    component: GalleryView
   },
 ]
 
