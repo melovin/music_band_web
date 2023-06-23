@@ -12,7 +12,7 @@ components:{
 }
 }
 </script>
-<style  scoped>
+<style scoped>
 main{
     display: block;
 }

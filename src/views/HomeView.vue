@@ -54,9 +54,14 @@ main{
   }
   main img{
     flex: 1;
-    width: 100%;
-    max-width: 1000px;
+    max-height: 700px;
+    max-width: 746px;
+    height: 52vh;
+    width: 52vw;
     height: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 20px 17px;
+    border-top: #FFD132 solid 1px;
+    border-left: #FFD132 solid 1px;
    }
    main h1::before{
     content: 'THE shoop shoop Q';
@@ -70,7 +75,7 @@ main{
    main h2{
     color: white;
     font-weight: 100;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     line-height: 3rem;
     width: 40rem;
     text-size-adjust: auto;

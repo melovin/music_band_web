@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div class="logo_img">
-                <img height="64px" src="../assets/logo.svg" />
+                <img height="64px" src="../assets/logo2.png" />
                 <h1 class="logo">The Shoop Shoop Q</h1>
             </div>
           <ul class="nav-links">
@@ -27,9 +27,6 @@ import getPages from '@/Repo/PageRepo'
             return{
                 pages: this.NavGetPages(),
             }
-        },
-        computed:{
-            activePage: 0
         },
         methods: {
             navSlide() {
@@ -71,17 +68,19 @@ import getPages from '@/Repo/PageRepo'
     font-weight: 400;
 }
 .logo_img img{
-    height: 64px;
+    height:20vh;
+    max-height: 120px;
 }
 .logo_img{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex: 2;
+    gap: 10px;
 }
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     min-height: 10vh;
     /*background-color: #181818;*/
     font-family: 'Libre Baskerville', serif;
@@ -90,8 +89,8 @@ nav {
     width: 100%;
     position: sticky;
     z-index: 10;
-    padding-bottom: 5rem;
-    padding-top: 2rem;
+    margin-bottom: 5rem;
+    padding-top: 15px;
 }
 
 .logo {
@@ -108,7 +107,7 @@ nav {
     justify-content: space-between;
     width: 30%;
     flex: 1;
-    
+    margin-bottom: -20px;
 }
 
 .nav-links li {
@@ -138,7 +137,7 @@ nav {
 a.active{
     color: #FFD132;
 }
-/*screen*/
+/*screen
 
 @media screen and (max-width:2000px) {
     .nav-links {
@@ -204,5 +203,5 @@ a.active{
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-
+*/
 </style>

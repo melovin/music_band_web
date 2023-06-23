@@ -31,11 +31,6 @@ const routes = [
     name: 'Kontakt',
     component: ContactView
   },
-  {
-    path: '/gallery',
-    name: 'Galerie',
-    component: GalleryView
-  },
 ]
 
 const router = createRouter({

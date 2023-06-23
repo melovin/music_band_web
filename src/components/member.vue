@@ -17,8 +17,6 @@ export default {
     data()
     {
         return{
-            member: this.member,
-            even: this.even
         }
     },
     computed:{
@@ -49,11 +47,16 @@ p{
 }
 .card{
     display: flex;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    gap: 50px;
+    border-radius: 10px;
+    background-color: #1A1A1A;
 }
-img{
+.card img{
     flex: 1;
     height: 300px;
     width: auto;
+    border-radius: 10px;
 }
 .decs{
     flex: 2;

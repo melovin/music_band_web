@@ -1,6 +1,6 @@
 <template lang="cs">
     <div class="content">
-        <router-link :to="pages[0].url">{{pages[0].title}} -></router-link>
+        <router-link class="text" :to="pages[0].url">{{pages[0].title}} →</router-link>
         <router-link :to="pages[1].url"><div class="btn">{{pages[1].title}}</div></router-link>
     </div>
 </template>
@@ -13,7 +13,6 @@
         ],
         data(){
             return{
-                pages: this.pages
             }
         }             
     }
@@ -23,6 +22,7 @@
     display: flex;
     align-items: center;
     margin-top: 2rem;
+    text-align: center;
 }
 .btn{
     background-color: #FFD132;
@@ -32,11 +32,18 @@
     width: 7rem;
     color: black;
     text-align: center;
-    margin-left: 2rem;
+    flex: 1;
+    margin-left: 24px;
 }
 a{
     text-decoration: none;
     font-size: 16px;
+    width: 6rem;
+    padding: 0.6rem;
+}
+.text{
+    display: flex;
+    padding-left: 0;
 }
 a:visited{
     color: white;

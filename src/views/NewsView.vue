@@ -41,6 +41,7 @@ export default {
 }
 </script>
 <style scoped>
+
 h1{
     text-transform: uppercase;
     color: #FFD132;
@@ -48,7 +49,6 @@ h1{
     font-size: 4rem;
     text-align: center;
 }
-
 h1::before{
     content: 'Aktuality';
     text-transform: uppercase;

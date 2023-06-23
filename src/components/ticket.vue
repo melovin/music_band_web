@@ -1,6 +1,16 @@
 <template lang="cs">
     <div>
-        <div class="ticket">
+        <div class="ticket pc">
+            <div class="ticketContent">
+                <div class="content">
+                    <h2>{{this.news.name}}</h2>
+                    <p>{{this.news.desc}}</p>
+                    <p class="date">Publikováno: {{this.news.date}}</p>
+                </div>
+                <img src="../assets/hp_foto.svg" />
+            </div>
+        </div>
+        <div class="ticket mobile">
             <div class="ticketContent">
                 <div class="content">
                     <h2>{{this.news.name}}</h2>
@@ -20,33 +30,44 @@ export default {
     data()
     {
         return{
-            news: this.news
         }
+    },
+    created(){
+
     }
 }
 </script>
 <style scoped>
+.mobile{
+    display: none;
+}
 .ticketContent{
     display: flex;
     justify-content: center;
-    left: 50%;
-    top: 50%;
+    align-items: center;
+    max-width: 1200px;
+    width: 70vw;
+    max-height: 500px;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
 }
-img{
-    height: 300px;
-    width: auto;
+.ticketContent img{
+    max-height: 300px;
+    max-width: 370px;
+    width: 50vw;
+    height: 50vh;
     flex: 1;
-    margin-left: -40rem;
-    margin-top: 5rem;
 }
 .ticket{
     background-image: url('../assets/ticket.svg');
     background-position: center;
     width: 100%;
-    height: 35rem;
+    max-height: 40rem;
+    height: 45vh;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
+    background-size: contain;
+    margin-bottom: 50px;
 } 
 h2{
     color: #FFD132;
@@ -56,8 +77,6 @@ h2{
     font-size: 50px;
 }
 .content{
-    margin-left: 200px;
-    margin-top: 50px;
     flex: 1;
 }
 p{
@@ -72,4 +91,17 @@ p{
 .date{
     color: #FFD132;
 }
+@media screen and (max-width: 1200px) {
+    .mobile{
+        display: block;
+    }
+    .pc{
+        display: none;
+    }
+    .ticket {
+        background: url('../assets/ticket_vertical.png');
+        background-repeat: no-repeat;
+        max-width: 500px;
+      }
+  }
 </style>
