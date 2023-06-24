@@ -1,7 +1,7 @@
 <template lang="cs">
     <div>
         <div class="card" :class="{even: !this.even}">
-            <img :src="member.photo" :alt="member.name + ' ' + member.surname + 'fotografie'" />
+            <img :src="member.foto" :alt="member.name + ' ' + member.surname + 'fotografie'" />
             <div class="desc">
                 <h3>{{member.name + ' ' + member.surname}}</h3>
                 <p>{{member.about}}</p>
@@ -51,6 +51,10 @@ p{
     gap: 50px;
     border-radius: 10px;
     background-color: #1A1A1A;
+    transition: transform .2s;
+}
+.card:hover{
+    transform: scale(1.1);
 }
 .card img{
     flex: 1;

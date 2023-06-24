@@ -2,10 +2,10 @@
     <main lang="cs">
         <div class="intro">
           <h1>the shoop shoop q</h1>
-          <h2>Pětičlenné uskupení mladých hudebníků, hrající funky a jazzový repertoár</h2>
+          <h2>Pětičlenné uskupení mladých hudebníků, hrající funky a jazzový repertoár, <br/> Potřebujete kapelu na svojí akci nebo oslavu? <br/> Neváhejte nás kontaktovat.</h2>
           <cta :pages="this.ctapages"></cta>
         </div>
-        <img src="../assets/hp_foto.svg" alt="foto kapely">
+        <img id="mainPh" src="../assets/hp_foto.svg" alt="foto kapely">
       </main>
 </template>
 <script>
@@ -38,11 +38,13 @@ export default {
 main{
     display: flex;
     align-items: center;
+    margin-top: 15vh;
+    justify-content: space-between;
   }
   .intro{
     flex: 1;
     position: relative;
-    max-width: 80%;
+    width: 40vw;
     margin-top: -10rem;
     
   }
@@ -54,9 +56,7 @@ main{
   }
   main img{
     flex: 1;
-    max-height: 700px;
     max-width: 746px;
-    height: 52vh;
     width: 52vw;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 20px 17px;
@@ -77,7 +77,28 @@ main{
     font-weight: 100;
     letter-spacing: 2px;
     line-height: 3rem;
-    width: 40rem;
     text-size-adjust: auto;
    }
+   @media screen and (max-width: 1700px) {
+    .info{
+      max-width: 300px;
+    }
+    main img{
+      max-width: 600px;
+    }
+    main h1{
+      font-size: 3.5rem;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .intro{
+        margin-top: 0;
+    }
+    main{
+      flex-direction: column;
+    }
+    main #mainPh{
+      display: none;
+    }
+  }
 </style>

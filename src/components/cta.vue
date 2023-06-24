@@ -35,6 +35,9 @@
     flex: 1;
     margin-left: 24px;
 }
+.btn:hover{
+    background-color: #d4a704;
+}
 a{
     text-decoration: none;
     font-size: 16px;
@@ -55,5 +58,8 @@ span{
 }
 span a:visited{
     color: black !important;
+}
+a:hover, a:active{
+    color: #d4a704;
 }
 </style>

@@ -24,7 +24,7 @@
       </div>
       <div class="cards">
         <div v-for="(member, index) in members" class="m">
-          <member  :member="members[index]" :even="index % 2 == 0"></member>
+          <member  :member="members[index].acf" :even="index % 2 == 0"></member>
         </div>
       </div>
       <div class="ctaBottom">
@@ -81,7 +81,6 @@ export default {
 <style scoped>
 .members{
   position: relative;
-  overflow: hidden;
 }
 .ctaBottom{
   display: flex;

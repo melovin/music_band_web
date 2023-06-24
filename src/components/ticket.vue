@@ -2,22 +2,22 @@
     <div>
         <div class="ticket pc">
             <div class="ticketContent">
-                <div class="content">
-                    <h2>{{this.news.name}}</h2>
-                    <p>{{this.news.desc}}</p>
-                    <p class="date">Publikováno: {{this.news.date}}</p>
+                <div class="content1">
+                    <h2>{{this.news.acf.name}}</h2>
+                    <p>{{this.news.acf.desc}}</p>
+                    <p class="date">Publikováno: {{this.news.acf.date}}</p>
                 </div>
-                <img src="../assets/hp_foto.svg" />
+                <img :src="this.news.acf.foto" />
             </div>
         </div>
         <div class="ticket mobile">
             <div class="ticketContent">
-                <div class="content">
-                    <h2>{{this.news.name}}</h2>
-                    <p>{{this.news.desc}}</p>
-                    <p class="date">Publikováno: {{this.news.date}}</p>
+                <div class="content1">
+                    <h2>{{this.news.acf.name}}</h2>
+                    <p>{{this.news.acf.desc}}</p>
+                    <p class="date">Publikováno: {{this.news.acf.date}}</p>
                 </div>
-                <img src="../assets/hp_foto.svg" />
+                <img :src="this.news.acf.foto" />
             </div>
         </div>
     </div>
@@ -47,8 +47,8 @@ export default {
     align-items: center;
     max-width: 1200px;
     width: 70vw;
-    max-height: 500px;
-    height: 50vh;
+    max-height: 533px;
+    height: 45vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -58,6 +58,10 @@ export default {
     width: 50vw;
     height: 50vh;
     flex: 1;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-right: #FFD132 solid 2px;
+    border-bottom: #FFD132 solid 2px;
 }
 .ticket{
     background-image: url('../assets/ticket.svg');
@@ -76,7 +80,7 @@ h2{
     letter-spacing: 3px;
     font-size: 50px;
 }
-.content{
+.content1{
     flex: 1;
 }
 p{

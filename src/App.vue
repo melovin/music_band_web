@@ -32,6 +32,7 @@ body{
  width: 90%;
  margin-left: auto;
  margin-right: auto;
+ background-image: url("../src/assets/notes_gray2.svg");
 }
 
 </style>

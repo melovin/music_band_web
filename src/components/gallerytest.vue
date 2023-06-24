@@ -56,7 +56,11 @@ export default {
     margin: 2rem;
     border-right: #FFD132 solid 3px;
     border-bottom: #FFD132 solid 3px;
-}   
+    transition: transform .2s;
+}
+.gallery-thumbnail img:hover, video:hover {
+    transform: scale(1.1);
+}
 .my-gallery, .videos{
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +72,7 @@ video{
     height: 300px;
     width: 300px;
     object-fit: cover;
+    transition: transform .2s;
 }
 video:fullscreen{
     object-fit: contain;
