@@ -154,7 +154,6 @@ main img{
  main h2{
   color: white;
   font-weight: 100;
-  letter-spacing: 1px;
   line-height: 2.5rem;
   text-size-adjust: auto;
  }
@@ -227,6 +226,21 @@ main img{
     gap: 50px;
   }
 }
+@media screen and (max-width: 1700px) {
+  .intro{
+    margin-top: 0;
+    margin-right: 50px;
+  }
+  main img{
+    max-width: 600px;
+  }
+  main h1{
+    font-size: 3.5rem;
+  }
+  main #mainPh{
+    max-width: 690px;
+  }
+}
 @media screen and (max-width: 1600px) {
   .info{
     max-width: 300px;
@@ -235,8 +249,19 @@ main img{
     max-width: 500px;
   }
   main{
-    padding-top: 100px;
+    margin-top: 10vh;
    }
+}
+@media screen and (max-width: 1440px) {
+  .intro{
+      margin-right: 50px;
+  }
+  main h1{
+    font-size: 3rem;
+  }
+  main #mainPh{
+    width: 37vw;
+  }
 }
 @media screen and (max-width: 1400px) {
   .cards .m:nth-child(even)
@@ -255,6 +280,47 @@ main img{
   }
   main img{
     display: none;
+  }
+  .intro{
+    margin-top: 0;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+}
+.mobile{
+  display: block;
+}
+.line{
+  height: 102%;
+}
+}
+
+@media screen and (max-width: 960px) {
+
+  main h1{
+    font-size: 32px;
+    padding-left: 7px;
+  }
+  main h1::before{
+    margin-left: 3px;
+    margin-top: -3px;
+   }
+  .intro{
+      margin-top: 0;
+      width: 60vw;
+      font-size: 0.7rem;
+      margin-right: 0;
+
+  }
+  main h2{
+    line-height: 2rem;
+    text-align: left;
+  }
+  main{
+    flex-direction: column;
+  }
+  main img{
+    border: none;
   }
 }
 </style>

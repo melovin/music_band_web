@@ -1,7 +1,7 @@
 <template lang="cs">
-    <div>
+    <div class="wrapper">
         <h1>Aktuality</h1>
-        <div class="tickets" v-for="ticket in this.news">
+        <div class="ticketselement" v-for="ticket in this.news">
             <ticket :news="ticket"></ticket>
         </div>
         <cta :pages="ctapages" class="ctaBottom"></cta>
@@ -63,5 +63,17 @@ h1::before{
     justify-content: center;
     margin-bottom: 5rem;
   }
-
+.ticketselement{
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 1350px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    h1{
+        margin-bottom: -70px;
+    }
+}
 </style>

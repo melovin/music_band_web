@@ -62,4 +62,9 @@ span a:visited{
 a:hover, a:active{
     color: #d4a704;
 }
+@media screen and (max-width: 400px) {
+    .btn{
+        margin-left: 0;
+    }
+  }
 </style>

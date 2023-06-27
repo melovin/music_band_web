@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div class="logo_img">
-                <img height="64px" src="../assets/logo2.png" />
+                <img height="64px" src="../assets/logo2.png" @click="this.$router.push('/')" />
                 <h1 class="logo">The Shoop Shoop Q</h1>
             </div>
           <ul class="nav-links">
@@ -20,12 +20,9 @@
 <script>
 import getPages from '@/Repo/PageRepo'
     export default {
-        props:[
-
-            ],
         data(){
             return{
-                pages: this.NavGetPages(),
+                pages: this.NavGetPages()
             }
         },
         methods: {
@@ -60,6 +57,9 @@ import getPages from '@/Repo/PageRepo'
     }
 </script>
 <style scoped>
+img{
+    cursor: pointer;
+}
 .router-link-active{
     color: #FFD132 !important;
 }
@@ -137,14 +137,18 @@ nav {
 a.active{
     color: #FFD132;
 }
-/*screen
+/*screen*/
 
 @media screen and (max-width:2000px) {
     .nav-links {
-        width: 50%;
+        flex: 2;
+        justify-content: right;
+    }
+    li{
+        margin-left: 20px;
     }
 }
-
+/*
 @media screen and (max-width:768px) {
     body {
         overflow-x: hidden;

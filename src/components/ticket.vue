@@ -1,5 +1,5 @@
 <template lang="cs">
-    <div>
+    <div id="wrapper">
         <div class="ticket pc">
             <div class="ticketContent">
                 <div class="content1">
@@ -7,17 +7,18 @@
                     <p>{{this.news.acf.desc}}</p>
                     <p class="date">Publikováno: {{this.news.acf.date}}</p>
                 </div>
-                <img :src="this.news.acf.foto" />
+                <img class="eventPh" :src="this.news.acf.foto" />
             </div>
         </div>
         <div class="ticket mobile">
             <div class="ticketContent">
+                <img class="mobile bcg" src="../assets/ticket_vertical.png" />
                 <div class="content1">
                     <h2>{{this.news.acf.name}}</h2>
                     <p>{{this.news.acf.desc}}</p>
                     <p class="date">Publikováno: {{this.news.acf.date}}</p>
                 </div>
-                <img :src="this.news.acf.foto" />
+                <img class="eventPh" :src="this.news.acf.foto" />
             </div>
         </div>
     </div>
@@ -46,13 +47,13 @@ export default {
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    width: 70vw;
+    width: 60%;
     max-height: 533px;
     height: 45vh;
     margin-left: auto;
     margin-right: auto;
 }
-.ticketContent img{
+.eventPh{
     max-height: 300px;
     max-width: 370px;
     width: 50vw;
@@ -95,17 +96,95 @@ p{
 .date{
     color: #FFD132;
 }
-@media screen and (max-width: 1200px) {
-    .mobile{
-        display: block;
+.mobile{
+    display: none;
+}
+@media screen and (max-width: 1350px) {
+    h2{
+        font-size: 28px;
+        max-width: 35vw;
+    }
+    p{
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 35vw;
+    }
+    #wrapper{
+        width: 100%;
+    }
+    .bcg{
+        position: absolute;
+        z-index: -10;
+        margin-left: auto;
+        margin-right: auto;
+        width: 132vw;
+        height: 80vh;
     }
     .pc{
         display: none;
     }
+    .mobile{
+        display: block;
+    }
     .ticket {
-        background: url('../assets/ticket_vertical.png');
+        background: none;
         background-repeat: no-repeat;
-        max-width: 500px;
+        margin-bottom: 50px;
+        position: relative;
+        width: 100%;
       }
+      .ticketContent{
+        flex-direction: column;
+        margin-top: 250px;
+
+      }
+      .content1{
+        text-align: center;
+      }
+  }
+  @media screen and (max-width: 1350px) {
+    .eventPh{
+        width: 25vw;
+    }
+    h1{
+        margin-bottom: -70px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    h2{
+        font-size: 28px;
+        max-width: 45vw;
+    }
+    p{
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 45vw;
+    }
+    .bcg{
+        width: 200vw;
+    }
+    .eventPh{
+        width: 30vh;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .eventPh{
+        width: 20vh;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .bcg{
+        width: 250vw;
+    }
+    p{
+        max-width: 70vw;
+    }
+    h2{
+        max-width: 50vw;
+        margin-right: auto;
+        margin-left: auto;
+    }
   }
 </style>

@@ -27,7 +27,6 @@ body{
  margin: 0;
  padding: 0;
  background-color: #1A1A1A;
- font-family: 'Libre Baskerville', serif;
  font-family: 'Poppins', sans-serif;
  width: 90%;
  margin-left: auto;

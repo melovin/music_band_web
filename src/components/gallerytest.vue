@@ -65,6 +65,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
 }
+.my-gallery{
+    justify-content: center;
+}
 video{
     margin: 2rem;
     border-bottom: #FFD132 solid 3px;
@@ -73,6 +76,10 @@ video{
     width: 300px;
     object-fit: cover;
     transition: transform .2s;
+    cursor: pointer;
+}
+.bottom{
+    justify-content: center;
 }
 video:fullscreen{
     object-fit: contain;
@@ -94,9 +101,12 @@ video:fullscreen{
     margin-left: 5px;
     margin-top: -5px;
 }
-.bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.videos{
+    justify-content: center;
+}
+@media screen and (max-width: 500px) {
+    h2{
+        text-align: center;
+    }
 }
 </style>

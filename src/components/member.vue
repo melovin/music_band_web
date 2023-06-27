@@ -1,5 +1,5 @@
 <template lang="cs">
-    <div>
+    <div id="wrapper">
         <div class="card" :class="{even: !this.even}">
             <img :src="member.foto" :alt="member.name + ' ' + member.surname + 'fotografie'" />
             <div class="desc">
@@ -68,4 +68,35 @@ p{
 .even{
     flex-direction: row-reverse;
 }
+@media screen and (max-width: 900px) {
+    #wrapper
+    {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .card{
+        flex-direction: column;
+        gap: 17px;
+    }
+    .desc{
+        line-height: 2rem;
+        font-size: 18px;
+        width: 80%;
+    }
+    .card img{
+        height: 40vh;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .card:hover{
+        transform: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .card img{
+        flex: auto;
+    }
+  }
 </style>
