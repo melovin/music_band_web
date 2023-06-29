@@ -81,4 +81,17 @@ h1::before{
         overflow-x: hidden;
     }
   }
+  @media screen and (max-width:500px) {
+    h1{
+       font-size: 2.5rem;
+    }
+    h1::before{
+        margin-left: 4px;
+        margin-top: -4px;
+    }
+    .ticketselement{
+        margin-top: -90px;
+    }
+  }
+
 </style>

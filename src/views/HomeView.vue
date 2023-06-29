@@ -10,13 +10,13 @@
           <img class="mobile" src="../assets/saxophone_gold.svg">
           <img class="mobile" src="../assets/saxophone_yellow.svg">
         </div>
-    </main>
+      </main>
 </template>
 <script>
 import Cta from "../components/cta.vue"
 export default {
     props:[
-        'activePage', 'pages'
+        'pages'
         ],
     components: {
       Cta
@@ -44,6 +44,7 @@ main{
     align-items: center;
     margin-top: 10vh;
     justify-content: space-between;
+    height: 100%;
   }
   .intro{
     flex: 1;
@@ -84,6 +85,7 @@ main{
    .mobile{
     display: none;
    }
+
    @media screen and (max-width: 1700px) {
     .intro{
       margin-top: 0;
@@ -164,4 +166,12 @@ main{
       align-items: center;
     }
   }
+  @media screen and (max-height:1080px) {
+    main #mainPh{
+        max-width: 530px;
+    }
+    main h2{
+      font-size: 20px;
+    }
+}
 </style>

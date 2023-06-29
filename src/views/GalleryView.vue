@@ -33,4 +33,13 @@ main h1::before{
     margin-left: 5px;
     margin-top: -5px;
 }
+@media screen and (max-width: 500px) {
+    main h1{
+      font-size: 2.5rem;
+    }
+    main h1::before{
+        margin-left: 4px;
+        margin-top: -4px;
+    }
+}
 </style>

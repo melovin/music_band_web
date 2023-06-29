@@ -1,4 +1,4 @@
-<template lang="en">
+<template lang="cs">
     <div class="wrapper">
         <nav>
             <div class="logo_img">
@@ -70,12 +70,6 @@ import getPages from '@/Repo/PageRepo'
             }
 
         },
-        // created(){
-        //     window.addEventListener("resize", this.myEventHandler);
-        // },
-        // destroyed() {
-        //     window.removeEventListener("resize", this.myEventHandler);
-        // },
     }
 </script>
 <style scoped>
@@ -148,8 +142,6 @@ nav {
     display: none;
     cursor: pointer;
     z-index: 50;
-    margin-right: 25px;
-
 }
 
 .burger div {
@@ -189,7 +181,6 @@ a.active{
         margin-left: 20px;
     }
 }
-
 @media screen and (max-width:1150px) {
     body {
         overflow-x: hidden;
@@ -198,7 +189,7 @@ a.active{
         display: none;
         position: absolute;
         right: 0px;
-        height: 700px;
+        height: 610px;
         top: 70px;
         background-color: #181818;
         display: none;
@@ -209,11 +200,11 @@ a.active{
         transition: transform 0.5s ease-in;
         border-radius: 50px;
         z-index: 5;
+        margin-right: -5%;
     }
     .nav-links li {
-        flex: 1;
         margin-top: 5rem;
-        margin-right: auto;
+        margin-right: 22px;
     }
     .burger {
         display: block;

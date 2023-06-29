@@ -186,5 +186,15 @@ p{
         margin-right: auto;
         margin-left: auto;
     }
+  }  @media screen and (max-height:900px) {
+    .eventPh{
+        max-height: 238px;
+        max-width: 307px;
+    }
+}
+@media screen and (max-height:1080px) {
+    h2{
+        font-size: 35px;
+    }
   }
 </style>

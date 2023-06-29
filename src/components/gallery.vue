@@ -105,8 +105,13 @@ video:fullscreen{
     justify-content: center;
 }
 @media screen and (max-width: 500px) {
-    h2{
+    .content h2{
         text-align: center;
+        font-size: 2rem;
+    }
+    .content h2::before{
+        margin-left: 4px;
+        margin-top: -4px;
     }
 }
 </style>

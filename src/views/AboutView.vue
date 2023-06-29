@@ -38,7 +38,7 @@ import getMembers from "@/Repo/MemberRepo";
 import Member from "@/components/member.vue";
 export default {
     props:[
-        'activePage', 'pages'
+        'pages'
         ],
     components: {
       Cta,
@@ -307,7 +307,7 @@ main img{
    }
   .intro{
       margin-top: 0;
-      width: 60vw;
+      width: 69vw;
       font-size: 0.7rem;
       margin-right: 0;
 
@@ -322,5 +322,14 @@ main img{
   main img{
     border: none;
   }
+}
+@media screen and (max-height:1080px) {
+  main img{
+      max-width: 530px;
+  }
+  main h2{
+    line-height: 2rem;
+    font-size: 20px;
+   }
 }
 </style>

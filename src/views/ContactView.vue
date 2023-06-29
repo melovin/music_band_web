@@ -16,13 +16,18 @@
                 <a href="https://www.instagram.com/theshoopshoopq/">@theshoopshoopq</a>
             </div>
             <div class="unit">
-                <img class="icon" src="../assets/contact_icons/fb.svg" />
+                <img class="icon" src="../assets/contact_icons/fb.png" />
                 <a href="https://www.facebook.com/theshoopshoopQ/">The Shoop Shoop Q</a>
             </div>
             <div class="unit">
-              <img class="icon" src="../assets/contact_icons/document.svg" />
+              <img class="icon" src="../assets/contact_icons/document.png" />
               <p>Zapsáno v Praze...</p>
           </div>
+          <hr />
+          <div class="unit">
+            <img class="icon" src="../assets/contact_icons/signature.png" />
+            <a href="https://ruslanazubareva.cz/">Tvorba webu: www.ruslanazubareva.cz</a>
+        </div>
           </div>
         </div>
         <img class="mainPh" src="../assets/hp_foto.svg" alt="foto kapely">
@@ -38,6 +43,14 @@ export default {
 }
 </script>
 <style scoped>
+p{
+  margin: 0;
+ }
+hr{
+  color: white;
+  width: 300px;
+  margin-left: 0;
+}
 .contact{
     margin-top: 5vh
 }
@@ -99,6 +112,9 @@ main{
     letter-spacing: 1px;
     line-height: 2.5rem;
     text-size-adjust: auto;
+   }
+   img{
+    height: 50px;
    }
    .mobile{
     display: none;
@@ -186,6 +202,9 @@ main{
     .mobile{
       display: block;
     }
+    hr{
+      width: 100px;
+    }
     .saxophones{
       margin-top: 50px;
       display: flex;
@@ -194,23 +213,33 @@ main{
   }
   @media screen and (max-width: 500px) {
     .icon{
-      height: 25px;
+      height: 15px;
     }
     p{
       margin: 0;
     }
     a, p{
       margin-left: 5px;
-      font-size: 16px;
+      font-size: 14px;
       max-width: 160px;
     }
     .intro{
       display: flex;
       align-items: flex-start;
-      margin-left: 60px;
     }
     img{
       height: 150px;
     }
   }
+  @media screen and (max-height:1080px) {
+    main .mainPh{
+        max-width: 530px;
+    }
+    a, p{
+      font-size: 17px;
+    }
+    .icon{
+      height: 35px;
+    }
+}
 </style>
