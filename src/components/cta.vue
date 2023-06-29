@@ -48,6 +48,7 @@ a{
 .text{
     display: flex;
     padding-left: 0;
+    color: white;
 }
 a:visited{
     color: white;

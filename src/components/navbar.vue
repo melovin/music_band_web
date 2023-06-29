@@ -213,6 +213,7 @@ a.active{
     .nav-links li {
         flex: 1;
         margin-top: 5rem;
+        margin-right: auto;
     }
     .burger {
         display: block;
