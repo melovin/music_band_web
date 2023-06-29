@@ -76,4 +76,9 @@ h1::before{
         margin-bottom: -70px;
     }
 }
+@media screen and (max-width:1150px) {
+    .wrapper{
+        overflow-x: hidden;
+    }
+  }
 </style>

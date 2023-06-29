@@ -1,14 +1,14 @@
 <template lang="cs">
     <main>
         <h1>Galerie</h1>
-        <gallerytest></gallerytest>
+        <gallery></gallery>
     </main>
 </template>
 <script>
-import gallerytest from '@/components/gallerytest.vue';
+import gallery from '@/components/gallery.vue';
 export default {
 components:{
-    gallerytest
+    gallery
 }
 }
 </script>

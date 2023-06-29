@@ -31,12 +31,12 @@ export default {
     },
     methods:{
         async getImages(){
-            const res = await fetch('http://localhost:8081/wordpress/wp-json/acf/v3/gallery');
+            const res = await fetch('https://admin.theshoopshoopq.cz/wp-json/acf/v3/gallery');
             const data = await res.json();
-            this.items = data.map(x => ({src: x.acf.imageorvideo.url, thumbnail: x.acf.imageorvideo.url, w: x.acf.imageorvideo.width, h: x.acf.imageorvideo.height}))
+            this.items = data.map(x => ({src: x.acf.image.url, thumbnail: x.acf.image.url, w: x.acf.image.width, h: x.acf.image.height}))
         },
         async getVideos(){
-            const res = await fetch('http://localhost:8081/wordpress/wp-json/acf/v3/videos');
+            const res = await fetch('https://admin.theshoopshoopq.cz/wp-json/acf/v3/videos');
             const data = await res.json();
             this.videos = data.map(x => ({src: x.acf.url, desc: x.acf.video_desc}))
         }

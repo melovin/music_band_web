@@ -1,12 +1,12 @@
 <template lang="en">
-    <div>
+    <div class="wrapper">
         <nav>
             <div class="logo_img">
                 <img height="64px" src="../assets/logo2.png" @click="this.$router.push('/')" />
                 <h1 class="logo">The Shoop Shoop Q</h1>
             </div>
-          <ul class="nav-links">
-            <li v-for="(page,index) in this.pages"><router-link :to="page.url">{{page.title}}</router-link></li>
+          <ul class="nav-links" id="hideMe">
+            <li @click="this.navSlide()" v-for="(page,index) in this.pages"><router-link :to="page.url">{{page.title}}</router-link></li>
           </ul>
           <div class="burger" @click="this.navSlide()">
             <div class="line1"></div>
@@ -22,14 +22,24 @@ import getPages from '@/Repo/PageRepo'
     export default {
         data(){
             return{
-                pages: this.NavGetPages()
+                pages: this.NavGetPages(),
+                showNaw: false
             }
         },
         methods: {
             navSlide() {
+                const links = document.getElementById("hideMe");
+
+                if(this.showNaw)
+                {
+                    links.style.display = "none";
+                }
+                else
+                    links.style.display = "flex";
+
                 const burger = document.querySelector('.burger');
-                const nav = document.querySelector('.nav-links');
                 const navLinks = document.querySelectorAll('.nav-links li');
+                const nav = document.querySelector('.nav-links');
 
                 //burger.addEventListener('click', () => {
                     nav.classList.toggle('nav-active');
@@ -43,17 +53,29 @@ import getPages from '@/Repo/PageRepo'
                     });
                     burger.classList.toggle('toggle');
                 //});  
+                this.showNaw = !this.showNaw;
             },
             async NavGetPages()
             {
                 this.pages = await getPages();
+            },
+            myEventHandler(e){
+                if(window.innerWidth > 768 )
+                    this.showNaw = true;
+                else
+                {
+                    const links = document.getElementById("hideMe");
+                    links.style.display = "none";
+                }
             }
 
         },
-        created(){
-            //this.navSlide();
-
-        }
+        // created(){
+        //     window.addEventListener("resize", this.myEventHandler);
+        // },
+        // destroyed() {
+        //     window.removeEventListener("resize", this.myEventHandler);
+        // },
     }
 </script>
 <style scoped>
@@ -125,6 +147,9 @@ nav {
 .burger {
     display: none;
     cursor: pointer;
+    z-index: 50;
+    margin-right: 25px;
+
 }
 
 .burger div {
@@ -137,8 +162,24 @@ nav {
 a.active{
     color: #FFD132;
 }
+
 /*screen*/
 
+@media screen and (max-width:1500px) {
+    .logo_img h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:1220px) {
+    .logo_img h1{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:1150px) {
+    .nav-links {
+        display: flex !important;
+    }
+}
 @media screen and (max-width:2000px) {
     .nav-links {
         flex: 2;
@@ -148,18 +189,19 @@ a.active{
         margin-left: 20px;
     }
 }
-/*
-@media screen and (max-width:768px) {
+
+@media screen and (max-width:1150px) {
     body {
         overflow-x: hidden;
     }
     .nav-links {
+        display: none;
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top: 10vh;
+        height: 700px;
+        top: 70px;
         background-color: #181818;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         width: 50%;
@@ -176,7 +218,11 @@ a.active{
         display: block;
     }
 }
-
+@media screen and (max-width:550px) {
+    .logo_img h1{
+        display: none;
+    }
+}
 .nav-active {
     transform: translateX(0%);
 }
@@ -207,5 +253,5 @@ a.active{
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-*/
+
 </style>
